@@ -18,6 +18,11 @@ mongoose.connect(process.env.monogo).then(()=>
     console.log("DB connection error",err);
 });
 
+app.get('/',(req,res)=>
+{
+    res.send("Backend is Running");
+})
+
 app.use('/todos',crud);
 
 
