@@ -11,4 +11,3 @@ EXPOSE 3000
 
 CMD ["npm" , "start"]
 
-//jenkins trigger check
