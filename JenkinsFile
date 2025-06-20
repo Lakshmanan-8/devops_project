@@ -16,6 +16,13 @@ pipeline {
                 sh 'docker-compose down'
             }
         }
+        stage('Clear Docker Cache') {
+            steps {
+                 echo 'Clearing Docker builder cache...'
+                 sh 'docker builder prune -af || true'
+                }
+        }
+
 
         stage('redeploy container') {
             steps {
