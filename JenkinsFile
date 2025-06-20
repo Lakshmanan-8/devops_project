@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+
+
+    stages {
+        stage('check connection'){
+            steps {
+                echo 'Hello Lax! Jenkins pipeline is working!!'
+            }
+        }
+
+        stage('print date'){
+            steps {
+                sh 'date'
+            }
+        }
+
+        stage('List files') {
+            steps {
+                sh 'ls -l'
+            }
+        }
+    }
+}
