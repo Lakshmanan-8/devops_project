@@ -24,7 +24,7 @@ export default function TaskPage()
         <div>
             {!showform && !showlist &&(
                 <>
-                <h3 style={{cursor:'pointer',color:'red'}}onClick={handleonclickadd}><a>New Task</a></h3>
+                <h3 style={{cursor:'pointer',color:'green'}}onClick={handleonclickadd}><a>New Task</a></h3>
                 <h3 style={{cursor:'pointer',color:'red'}}onClick={handleonclicklist}><a>All Task</a></h3>
 
                 </>
