@@ -3,21 +3,24 @@ pipeline {
 
 
     stages {
-        stage('check connection'){
+        stage('clone code'){
             steps {
-                echo 'Hello Lax! Jenkins pipeline is working!!'
-            }
-        }
-
-        stage('print date'){
-            steps {
-                sh 'date'
-            }
-        }
-
-        stage('List files') {
-            steps {
+                echo 'Repo already cloned by jenkins automatically'
                 sh 'ls -l'
+            }
+        }
+
+        stage('stop exsisting container'){
+            steps {
+                echo 'stopping conatiners.....'
+                sh 'docker-compose down'
+            }
+        }
+
+        stage('redeploy container') {
+            steps {
+                echo 'Redeploying the conatiner'
+                sh 'docker-compose up -d --build --no-cache'
             }
         }
     }
