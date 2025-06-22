@@ -1,5 +1,6 @@
-import axios  from "axios";
+// src/api.js or wherever this lives
+import axios from "axios";
 
 export default axios.create({
-    baseURL :'http://localhost:5000/todos',
+  baseURL: "http://20.197.8.172:5000/todos", // ✅ use public IP
 });
